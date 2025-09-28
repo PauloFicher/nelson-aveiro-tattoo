@@ -6,7 +6,7 @@ const Gallery = () => {
 
   const images = [
     {
-      src: 'https://images.pexels.com/photos/1260264/pexels-photo-1260264.jpeg?auto=compress&cs=tinysrgb&w=800',
+      src: '/PUBLIC/assets/Japones/Brazo.webp',
       alt: 'Tatuaje de dragón japonés',
       title: 'Dragón Tradicional'
     },

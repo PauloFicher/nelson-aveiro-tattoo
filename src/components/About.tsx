@@ -16,7 +16,7 @@ const About = () => {
           <div className="relative">
             <div className="relative rounded-xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/1260264/pexels-photo-1260264.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+                src="/PUBLIC/assets/Aboutme.jpeg"
                 alt="Maestro tatuador en acción"
                 className="w-full h-[600px] object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />

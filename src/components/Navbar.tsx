@@ -33,7 +33,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="text-2xl font-bold text-red-600">
-              <span className="text-white">鬼</span>INK
+              <span className="">鬼 </span>Nelson Aveiro Tattoos
             </div>
           </div>
 

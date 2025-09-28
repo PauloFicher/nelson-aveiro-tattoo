@@ -5,21 +5,21 @@ const Hero = () => {
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        className="absolute inset-0 bg-cover bg-center bg-scroll"
         style={{
-          backgroundImage: 'url("https://images.pexels.com/photos/1260264/pexels-photo-1260264.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop")',
+          backgroundImage: 'url("https://images.pexels.com/photos/7589352/pexels-photo-7589352.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop")',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-black/90"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div className="animate-fade-in">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-            <span className="block mb-2">Tinta y Oscuridad:</span>
-            <span className="text-red-600 drop-shadow-lg">El Arte del Tatuaje</span>
-            <span className="block text-yellow-500">Japonés</span>
+          
+          <span className="text-red-600 drop-shadow-lg">El Arte del Tatuaje</span>
+            <span className="block text-yellow-500"></span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
