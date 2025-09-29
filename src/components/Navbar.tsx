@@ -23,63 +23,145 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-black/95 backdrop-blur-sm border-b border-red-600/20' 
-        : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="flex items-center">
-            <div className="text-2xl font-bold text-red-600">
-              <span className="">鬼 </span>Nelson Aveiro Tattoos
+    <>
+      <nav className="absolute w-full z-50 transition-all duration-500 bg-transparent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-6">
+            {/* Logo con animación */}
+            <div className="hidden md:flex items-center group cursor-pointer">
+              <div className="text-2xl font-bold text-white flex items-center gap-2">
+                <span className="text-red-600 transform group-hover:rotate-12 transition-transform duration-300">鬼</span>
+                <span className="group-hover:text-red-500 transition-colors duration-300">
+                  Nelson Aveiro Tattoos
+                </span>
+              </div>
             </div>
-          </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-300 hover:text-red-600 transition-colors duration-300 font-medium"
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-red-600 transition-colors"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-black/95 backdrop-blur-sm border-t border-red-600/20">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navItems.map((item) => (
+            {/* Desktop Navigation con animaciones */}
+            <div className="hidden md:flex space-x-1">
+              {navItems.map((item, index) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-300 hover:text-red-600 transition-colors duration-300"
-                  onClick={() => setIsMenuOpen(false)}
+                  className="relative px-4 py-2 text-white font-medium group overflow-hidden"
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  {item.name}
+                  <span className="relative z-10 group-hover:text-red-500 transition-colors duration-300">
+                    {item.name}
+                  </span>
+                  {/* Efecto hover underline animado */}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-400 group-hover:w-full transition-all duration-300"></span>
+                  {/* Efecto glow en hover */}
+                  <span className="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/5 transition-all duration-300 rounded-lg"></span>
                 </a>
               ))}
             </div>
+
+            {/* Mobile menu button con animación */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="relative w-10 h-10 text-white hover:text-red-500 transition-colors duration-300 flex items-center justify-center group"
+                aria-label="Toggle menu"
+              >
+                <div className="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/10 rounded-lg transition-all duration-300"></div>
+                <div className="relative">
+                  {isMenuOpen ? (
+                    <X size={24} className="animate-in spin-in-90 duration-300" />
+                  ) : (
+                    <Menu size={24} className="animate-in spin-in-90 duration-300" />
+                  )}
+                </div>
+              </button>
+            </div>
           </div>
-        )}
+        </div>
+      </nav>
+
+      {/* Overlay con fade */}
+      {isMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden animate-in fade-in duration-300"
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
+
+      {/* Mobile Navigation - Slide desde la derecha */}
+      <div className={`
+        fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-black/95 backdrop-blur-xl z-50 md:hidden
+        transform transition-transform duration-500 ease-out border-l border-red-600/20
+        ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
+      `}>
+        {/* Header del menú móvil */}
+        <div className="flex justify-between items-center p-6 border-b border-red-600/20">
+          <div className="text-xl font-bold text-red-600 flex items-center gap-2">
+            <span>鬼</span>
+            <span className="text-white">Menú</span>
+          </div>
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            className="text-white hover:text-red-500 transition-colors duration-300 p-2 hover:bg-red-600/10 rounded-lg"
+          >
+            <X size={24} />
+          </button>
+        </div>
+
+        {/* Items del menú con animación staggered */}
+        <div className="p-6 space-y-2">
+          {navItems.map((item, index) => (
+            <a
+              key={item.name}
+              href={item.href}
+              onClick={() => setIsMenuOpen(false)}
+              className={`
+                block px-6 py-4 text-lg text-white font-medium rounded-xl
+                hover:bg-red-600/10 hover:text-red-500 
+                transition-all duration-300 border border-transparent hover:border-red-600/30
+                transform hover:translate-x-2
+                ${isMenuOpen ? 'animate-in slide-in-from-right fade-in' : ''}
+              `}
+              style={{ 
+                animationDelay: `${index * 75}ms`,
+                animationDuration: '500ms',
+                animationFillMode: 'backwards'
+              }}
+            >
+              <span className="flex items-center justify-between">
+                {item.name}
+                <span className="text-red-600 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+              </span>
+            </a>
+          ))}
+        </div>
+        {/* Footer del menú móvil */}
+        <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-red-600/20">
+          <div className="text-center text-gray-400 text-sm">
+            <p className="mb-2">Síguenos en redes</p>
+            <div className="flex justify-center gap-4">
+              {['IG', 'FB', 'TW'].map((social, index) => (
+                <button
+                  key={social}
+                  className={`
+                    w-10 h-10 rounded-full border border-red-600/30 
+                    hover:bg-red-600 hover:border-red-600 
+                    transition-all duration-300 text-xs font-bold
+                    hover:scale-110 hover:shadow-lg hover:shadow-red-600/50
+                    ${isMenuOpen ? 'animate-in zoom-in fade-in' : ''}
+                  `}
+                  style={{ 
+                    animationDelay: `${(navItems.length * 75) + (index * 100)}ms`,
+                    animationDuration: '400ms',
+                    animationFillMode: 'backwards'
+                  }}
+                >
+                  {social}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
+    </>
   );
 };
 
