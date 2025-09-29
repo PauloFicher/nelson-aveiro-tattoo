@@ -18,7 +18,7 @@ const Gallery = () => {
   const imagesByCategory = {
     japones: [
       {
-        src: '/assets/DragonEspalda.jpeg',
+        src: '/assets/dragonespalda.jpeg',
         alt: 'Tatuaje de dragón japonés en espalda completa',
         title: 'Dragón Japonés',
         description: 'Fuerza y sabiduría ancestral'
