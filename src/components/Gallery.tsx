@@ -16,132 +16,131 @@ const Gallery = () => {
 
   // Imágenes por categoría
   const imagesByCategory = {
-    japones: [
-      {
-        src: '/assets/dragonespalda.jpeg',
-        alt: 'Tatuaje de dragón japonés en espalda completa',
-        title: 'Dragón Japonés',
-        description: 'Fuerza y sabiduría ancestral'
-      },
-      {
-        src: '/assets/Samurai.jpeg',
-        alt: 'Tatuaje de samurái japonés',
-        title: 'Samurái',
-        description: 'Honor y disciplina guerrera'
-      },
-      {
-        src: '/assets/oni.webp',
-        alt: 'Tatuaje de máscara oni',
-        title: 'Máscara Oni',
-        description: 'Protección contra el mal'
-      },
-      {
-        src: '/assets/geishaconlentes.webp',
-        alt: 'Tatuaje de geisha japonesa',
-        title: 'Geisha',
-        description: 'Elegancia y belleza tradicional'
-      },
-      {
-        src: '/assets/peces.jpeg',
-        alt: 'Tatuaje de carpas koi',
-        title: 'Carpas Koi',
-        description: 'Perseverancia y determinación'
-      },
-      {
-        src: '/assets/mascaraoni.jpeg',
-        alt: 'Tatuaje de máscara oni tradicional',
-        title: 'Oni Tradicional',
-        description: 'Poder y protección espiritual'
-      },
-      {
-        src: '/assets/guerreri.webp',
-        alt: 'Tatuaje de guerrero japonés',
-        title: 'Guerrero',
-        description: 'Valentía y honor samurái'
-      },
-      {
-        src: '/assets/dragonpierna.jpg',
-        alt: 'Tatuaje de dragón en pierna',
-        title: 'Dragón Pierna',
-        description: 'Arte tradicional japonés'
-      },
-      {
-        src: '/assets/cuadrogeisha.jpeg',
-        alt: 'Tatuaje estilo cuadro de geisha',
-        title: 'Geisha Artística',
-        description: 'Belleza y tradición'
-      },
-      {
-        src: '/assets/ojolucifer.jpeg',
-        alt: 'Tatuaje de ojo estilo lucifer',
-        title: 'Ojo Místico',
-        description: 'Misterio y poder'
-      }
-    ],
-    realismo: [
-      {
-        src: '/assets/cuadro.jpeg',
-        alt: 'Tatuaje realista',
-        title: 'Retrato Realista',
-        description: 'Detalle fotográfico'
-      },
-      {
-        src: '/assets/cuadro2.jpeg',
-        alt: 'Tatuaje realismo',
-        title: 'Arte Realista',
-        description: 'Precisión y sombras'
-      },
-      {
-        src: '/assets/cuadrobigote.jpg',
-        alt: 'Retrato con bigote',
-        title: 'Retrato Clásico',
-        description: 'Estilo vintage'
-      }
-    ],
-    blackwork: [
-      {
-        src: '/assets/Aboutme.jpeg',
-        alt: 'Tatuaje blackwork',
-        title: 'Blackwork Abstracto',
-        description: 'Tinta negra pura'
-      }
-    ],
-    otros: [
-      {
-        src: '/assets/Bannerhero.jpg',
-        alt: 'Otros trabajos',
-        title: 'Trabajo Personalizado',
-        description: 'Diseño único'
-      }
-    ],
-    cuadros: [
-      {
-        src: '/assets/cuadros.jpg',
-        alt: 'Cuadro artístico',
-        title: 'Cuadro Decorativo',
-        description: 'Arte físico para tu espacio'
-      },
-      {
-        src: '/assets/cuadro.jpeg',
-        alt: 'Arte en lienzo',
-        title: 'Obra en Lienzo',
-        description: 'Pieza única disponible'
-      },
-      {
-        src: '/assets/cuadro2.jpeg',
-        alt: 'Cuadro personalizado',
-        title: 'Arte Personalizado',
-        description: 'Diseños bajo pedido'
-      },
-      {
-        src: '/assets/participacion de eventos.jpeg',
-        alt: 'Evento artístico',
-        title: 'Exposiciones',
-        description: 'Participación en eventos'
-      }
-    ]
-  };
-
+  japones: [
+    {
+      src: '/assets/dragonespalda.jpeg',
+      alt: 'Tatuaje de dragón japonés en espalda completa',
+      title: 'Dragón Japonés',
+      description: 'Fuerza y sabiduría ancestral'
+    },
+    {
+      src: '/assets/Samurai.jpeg',
+      alt: 'Tatuaje de samurái japonés',
+      title: 'Samurái',
+      description: 'Honor y disciplina guerrera'
+    },
+    {
+      src: '/assets/oni.webp',
+      alt: 'Tatuaje de máscara oni',
+      title: 'Máscara Oni',
+      description: 'Protección contra el mal'
+    },
+    {
+      src: '/assets/geishaconlentes.webp',  // 👈 CORREGIDO
+      alt: 'Tatuaje de geisha japonesa',
+      title: 'Geisha',
+      description: 'Elegancia y belleza tradicional'
+    },
+    {
+      src: '/assets/peces.jpeg',
+      alt: 'Tatuaje de carpas koi',
+      title: 'Carpas Koi',
+      description: 'Perseverancia y determinación'
+    },
+    {
+      src: '/assets/mascaraoni.jpeg',
+      alt: 'Tatuaje de máscara oni tradicional',
+      title: 'Oni Tradicional',
+      description: 'Poder y protección espiritual'
+    },
+    {
+      src: '/assets/guerreri.webp',
+      alt: 'Tatuaje de guerrero japonés',
+      title: 'Guerrero',
+      description: 'Valentía y honor samurái'
+    },
+    {
+      src: '/assets/dragonpierna.jpg',
+      alt: 'Tatuaje de dragón en pierna',
+      title: 'Dragón Pierna',
+      description: 'Arte tradicional japonés'
+    },
+    {
+      src: '/assets/cuadrogeisha.jpeg',
+      alt: 'Tatuaje estilo cuadro de geisha',
+      title: 'Geisha Artística',
+      description: 'Belleza y tradición'
+    },
+    {
+      src: '/assets/ojolucifer.jpeg',
+      alt: 'Tatuaje de ojo estilo lucifer',
+      title: 'Ojo Místico',
+      description: 'Misterio y poder'
+    }
+  ],
+  realismo: [
+    {
+      src: '/assets/cuadro.jpeg',
+      alt: 'Tatuaje realista',
+      title: 'Retrato Realista',
+      description: 'Detalle fotográfico'
+    },
+    {
+      src: '/assets/cuadro2.jpeg',
+      alt: 'Tatuaje realismo',
+      title: 'Arte Realista',
+      description: 'Precisión y sombras'
+    },
+    {
+      src: '/assets/cuadrobigote.jpg',
+      alt: 'Retrato con bigote',
+      title: 'Retrato Clásico',
+      description: 'Estilo vintage'
+    }
+  ],
+  blackwork: [
+    {
+      src: '/assets/Aboutme.jpeg',
+      alt: 'Tatuaje blackwork',
+      title: 'Blackwork Abstracto',
+      description: 'Tinta negra pura'
+    }
+  ],
+  otros: [
+    {
+      src: '/assets/Bannerhero.jpg',
+      alt: 'Otros trabajos',
+      title: 'Trabajo Personalizado',
+      description: 'Diseño único'
+    }
+  ],
+  cuadros: [
+    {
+      src: '/assets/cuadros.jpg',
+      alt: 'Cuadro artístico',
+      title: 'Cuadro Decorativo',
+      description: 'Arte físico para tu espacio'
+    },
+    {
+      src: '/assets/cuadro.jpeg',
+      alt: 'Arte en lienzo',
+      title: 'Obra en Lienzo',
+      description: 'Pieza única disponible'
+    },
+    {
+      src: '/assets/cuadro2.jpeg',
+      alt: 'Cuadro personalizado',
+      title: 'Arte Personalizado',
+      description: 'Diseños bajo pedido'
+    },
+    {
+      src: '/assets/participacion de eventos.jpeg',
+      alt: 'Evento artístico',
+      title: 'Exposiciones',
+      description: 'Participación en eventos'
+    }
+  ]
+};
   const currentImages = imagesByCategory[activeTab] || [];
 
   const openModal = useCallback((index: number) => {
