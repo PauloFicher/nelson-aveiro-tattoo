@@ -7,11 +7,11 @@ const Gallery = () => {
 
   // Categorías de tatuajes
   const categories = [
-    { id: 'japones', name: 'Japonés', icon: '鬼' },
-    { id: 'realismo', name: 'Realismo', icon: '👁️' },
-    { id: 'blackwork', name: 'Blackwork', icon: '⚫' },
-    { id: 'otros', name: 'Otros Estilos', icon: '✨' },
-    { id: 'cuadros', name: 'Arte & Cuadros', icon: '🖼️' }
+    { id: 'japones', name: 'Japonés', icon: '' },
+    { id: 'realismo', name: 'Realismo', icon: '' },
+    { id: 'blackwork', name: 'Blackwork', icon: '' },
+    { id: 'otros', name: 'Otros Estilos', icon: '' },
+    { id: 'cuadros', name: 'Arte & Cuadros', icon: '' }
   ];
 
   // Imágenes por categoría
@@ -64,54 +64,26 @@ const Gallery = () => {
       alt: 'Tatuaje de dragón en pierna',
       title: 'Dragón Pierna',
       description: 'Arte tradicional japonés'
-    },
+    }
+    
+    
+  ],
+
+  blackwork: [
+    
+  ],
+  otros: [
     {
-      src: '/assets/cuadrogeisha.jpeg',
-      alt: 'Tatuaje estilo cuadro de geisha',
-      title: 'Geisha Artística',
-      description: 'Belleza y tradición'
+      src: '/assets/tribales.jpg',
+      alt: 'Otros trabajos',
+      title: 'Tribales',
+      description: 'Diseño único'
     },
     {
       src: '/assets/ojolucifer.jpeg',
       alt: 'Tatuaje de ojo estilo lucifer',
       title: 'Ojo Místico',
       description: 'Misterio y poder'
-    }
-  ],
-  realismo: [
-    {
-      src: '/assets/cuadro.jpeg',
-      alt: 'Tatuaje realista',
-      title: 'Retrato Realista',
-      description: 'Detalle fotográfico'
-    },
-    {
-      src: '/assets/cuadro2.jpeg',
-      alt: 'Tatuaje realismo',
-      title: 'Arte Realista',
-      description: 'Precisión y sombras'
-    },
-    {
-      src: '/assets/cuadrobigote.jpg',
-      alt: 'Retrato con bigote',
-      title: 'Retrato Clásico',
-      description: 'Estilo vintage'
-    }
-  ],
-  blackwork: [
-    {
-      src: '/assets/Aboutme.jpeg',
-      alt: 'Tatuaje blackwork',
-      title: 'Blackwork Abstracto',
-      description: 'Tinta negra pura'
-    }
-  ],
-  otros: [
-    {
-      src: '/assets/Bannerhero.jpg',
-      alt: 'Otros trabajos',
-      title: 'Trabajo Personalizado',
-      description: 'Diseño único'
     }
   ],
   cuadros: [
@@ -122,7 +94,7 @@ const Gallery = () => {
       description: 'Arte físico para tu espacio'
     },
     {
-      src: '/assets/cuadro.jpeg',
+      src: '/assets/2.jpg',
       alt: 'Arte en lienzo',
       title: 'Obra en Lienzo',
       description: 'Pieza única disponible'
@@ -134,10 +106,16 @@ const Gallery = () => {
       description: 'Diseños bajo pedido'
     },
     {
-      src: '/assets/participacion de eventos.jpeg',
-      alt: 'Evento artístico',
-      title: 'Exposiciones',
-      description: 'Participación en eventos'
+      src: '/assets/1.jpg',
+      alt: 'Cuadro personalizado',
+      title: 'Arte Personalizado',
+      description: 'Diseños bajo pedido'
+    },
+    {
+      src: '/assets/cuadrogeisha.jpeg',
+      alt: 'Tatuaje estilo cuadro de geisha',
+      title: 'Geisha Artística',
+      description: 'Belleza y tradición'
     }
   ]
 };

@@ -5,9 +5,9 @@ const Hero = () => {
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-scroll"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("https://images.pexels.com/photos/7589352/pexels-photo-7589352.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop")',
+          backgroundImage: 'url("/assets/bannernelson.jpg")',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-black/90"></div>
@@ -17,8 +17,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div className="animate-fade-in">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-          
-          <span className="text-red-600 drop-shadow-lg">El Arte del Tatuaje</span>
+            <span className="text-red-600 drop-shadow-lg">El Arte del Tatuaje</span>
             <span className="block text-yellow-500"></span>
           </h1>
           
@@ -27,14 +26,22 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="group relative px-8 py-4 bg-red-600 text-white font-bold text-lg rounded-lg overflow-hidden transition-all duration-300 hover:bg-red-700 hover:shadow-2xl hover:shadow-red-600/50 transform hover:scale-105">
+            <a 
+              href="https://wa.link/zvkhdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative px-8 py-4 bg-red-600 text-white font-bold text-lg rounded-lg overflow-hidden transition-all duration-300 hover:bg-red-700 hover:shadow-2xl hover:shadow-red-600/50 transform hover:scale-105 inline-block"
+            >
               <span className="relative z-10">Reserva tu Cita</span>
               <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </button>
+            </a>
             
-            <button className="px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-lg hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105">
+            <a 
+              href="#galeria"
+              className="px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-lg hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 inline-block"
+            >
               Ver Galería
-            </button>
+            </a>
           </div>
         </div>
 
@@ -48,9 +55,11 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="flex flex-col space-y-1">
+          <div className="w-2 h-2 bg-white rounded-full animate-ping"></div>
+          <div className="w-2 h-2 bg-white rounded-full animate-ping" style={{animationDelay: '0.2s'}}></div>
+          <div className="w-2 h-2 bg-white rounded-full animate-ping" style={{animationDelay: '0.4s'}}></div>
         </div>
       </div>
     </section>
