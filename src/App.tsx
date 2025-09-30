@@ -1,26 +1,22 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import Gallery from "./components/Gallery";
-import About from './components/About';
-import BackToTopButton from './components/BackToTopButton';
-
-import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import AftercarePage from './pages/AftercarePage';
 
 function App() {
   return (
-    <div className="bg-black overflow-x-hidden">
-      <Navbar />
-      <Hero />
-      <Services />
-      <Gallery />
-      <About />
-      <BackToTopButton />
-      <CallToAction />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="bg-black overflow-x-hidden">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/cuidado-post-tatuaje" element={<AftercarePage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
@@ -15,7 +16,8 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Inicio', href: '#inicio' },
+    { name: 'Inicio', href: '/' },
+    { name: 'Cuidado Post-Tatuaje', href: '/cuidado-post-tatuaje' },
     { name: 'Galería', href: '#galeria' },
     { name: 'Servicios', href: '#servicios' },
     { name: 'Reservas', href: '#reservas' },
@@ -28,14 +30,14 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             {/* Logo con animación */}
-            <div className="hidden md:flex items-center group cursor-pointer">
+            <a href="/" className="hidden md:flex items-center group cursor-pointer">
               <div className="text-2xl font-bold text-white flex items-center gap-2">
                 <span className="text-red-600 transform group-hover:rotate-12 transition-transform duration-300">鬼</span>
                 <span className="group-hover:text-red-500 transition-colors duration-300">
                   Nelson Aveiro Tattoos
                 </span>
               </div>
-            </div>
+            </a>
 
             {/* Desktop Navigation con animaciones */}
             <div className="hidden md:flex space-x-1">
