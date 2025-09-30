@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nelson-aveiro-tattoo.vercel.app/sitemap.xml
+
+# Allow all bots to crawl tattoo-related content
+Allow: /cuidado-post-tatuaje
+
+# Crawl-delay for better server performance
+Crawl-delay: 1
+
+# Block access to admin or private areas (if any in future)
+# Disallow: /admin/
+# Disallow: /private/

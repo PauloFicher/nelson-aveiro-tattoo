@@ -136,32 +136,12 @@ const Navbar = () => {
           ))}
         </div>
         {/* Footer del menú móvil */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-red-600/20">
-          <div className="text-center text-gray-400 text-sm">
-            <p className="mb-2">Síguenos en redes</p>
-            <div className="flex justify-center gap-4">
-              {['IG', 'FB', 'TW'].map((social, index) => (
-                <button
-                  key={social}
-                  className={`
-                    w-10 h-10 rounded-full border border-red-600/30 
-                    hover:bg-red-600 hover:border-red-600 
-                    transition-all duration-300 text-xs font-bold
-                    hover:scale-110 hover:shadow-lg hover:shadow-red-600/50
-                    ${isMenuOpen ? 'animate-in zoom-in fade-in' : ''}
-                  `}
-                  style={{ 
-                    animationDelay: `${(navItems.length * 75) + (index * 100)}ms`,
-                    animationDuration: '400ms',
-                    animationFillMode: 'backwards'
-                  }}
-                >
-                  {social}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
+        
+             
+            
+           
+       
+       
       </div>
     </>
   );

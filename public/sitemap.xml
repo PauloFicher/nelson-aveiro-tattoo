@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Página principal -->
+  <url>
+    <loc>https://nelson-aveiro-tattoo.vercel.app/</loc>
+    <lastmod>2025-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Imágenes destacadas -->
+    <image:image>
+      <image:loc>https://nelson-aveiro-tattoo.vercel.app/assets/cuadrogeisha.jpeg</image:loc>
+      <image:title>Tatuaje Geisha - Arte Japonés</image:title>
+      <image:caption>Tatuaje de geisha japonesa tradicional por Nelson Aveiro</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://nelson-aveiro-tattoo.vercel.app/assets/dragonespalda.jpeg</image:loc>
+      <image:title>Dragón Japonés Espalda Completa</image:title>
+      <image:caption>Tatuaje de dragón japonés en espalda completa</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://nelson-aveiro-tattoo.vercel.app/assets/Samurai.jpeg</image:loc>
+      <image:title>Tatuaje Samurái Japonés</image:title>
+      <image:caption>Arte tradicional samurái por Nelson Aveiro</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Página de cuidado post-tatuaje -->
+  <url>
+    <loc>https://nelson-aveiro-tattoo.vercel.app/cuidado-post-tatuaje</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    
+    <image:image>
+      <image:loc>https://nelson-aveiro-tattoo.vercel.app/assets/banner3.jpg</image:loc>
+      <image:title>Cuidado Post-Tatuaje Profesional</image:title>
+      <image:caption>Guía completa para el cuidado de tatuajes</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
